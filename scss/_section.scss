@@ -54,14 +54,34 @@ section {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        text-align: center;
+        text-align: left;
 
         &__image {
             @include m.display-image(map-get(m.$device-sizes, desktop));
         }
     }
 
-    &__text>* {
-        padding: 0 3vw;
+    &__text {
+        padding-right: 3vw;
+
+        &__image-container {
+            img {
+                padding: 0 1vw 0 0;
+                width: 40px;
+                height: 40px;
+
+                &:hover {
+                    @include m.light {
+                        filter: brightness(0.8);
+                        filter: drop-shadow(0 0 1px map-get(p.$dark-theme-colors, primary));
+                    }
+
+                    @include m.dark {
+                        filter: brightness(1.2);
+                        filter: drop-shadow(0 0 1px map-get(p.$light-theme-colors, primary));
+                    }
+                }
+            }
+        }
     }
 }

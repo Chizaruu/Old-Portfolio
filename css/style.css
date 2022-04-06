@@ -1,26 +1,32 @@
-:root[data-theme=light] p,
-:root[data-theme=light] a,
-:root[data-theme=light] li,
-:root[data-theme=light] footer, :root[data-theme=light] h1 h2,
-:root[data-theme=light] h3,
-:root[data-theme=light] h4,
-:root[data-theme=light] h5,
-:root[data-theme=light] h6 {
-  color: black;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) p,
+:root:not([data-theme=light]):not([data-theme=dark]) a,
+:root:not([data-theme=light]):not([data-theme=dark]) li,
+:root:not([data-theme=light]):not([data-theme=dark]) footer, :root:not([data-theme=light]):not([data-theme=dark]) h1,
+:root:not([data-theme=light]):not([data-theme=dark]) h2,
+:root:not([data-theme=light]):not([data-theme=dark]) h3,
+:root:not([data-theme=light]):not([data-theme=dark]) h4,
+:root:not([data-theme=light]):not([data-theme=dark]) h5,
+:root:not([data-theme=light]):not([data-theme=dark]) h6 {
+    color: black;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) p,
+:root:not([data-theme=light]):not([data-theme=dark]) a,
+:root:not([data-theme=light]):not([data-theme=dark]) li,
+:root:not([data-theme=light]):not([data-theme=dark]) footer, :root:not([data-theme=light]):not([data-theme=dark]) h1,
+:root:not([data-theme=light]):not([data-theme=dark]) h2,
+:root:not([data-theme=light]):not([data-theme=dark]) h3,
+:root:not([data-theme=light]):not([data-theme=dark]) h4,
+:root:not([data-theme=light]):not([data-theme=dark]) h5,
+:root:not([data-theme=light]):not([data-theme=dark]) h6 {
+    color: #ffffff;
+  }
 }
 
-:root[data-theme=dark] p,
-:root[data-theme=dark] a,
-:root[data-theme=dark] li,
-:root[data-theme=dark] footer, :root[data-theme=dark] h1 h2,
-:root[data-theme=dark] h3,
-:root[data-theme=dark] h4,
-:root[data-theme=dark] h5,
-:root[data-theme=dark] h6 {
-  color: #ffffff;
-}
-
-h1 h2,
+h1,
+h2,
 h3,
 h4,
 h5,
@@ -28,9 +34,13 @@ h6 {
   font-family: "Roboto Slab", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   letter-spacing: 0;
+  font-weight: 700;
   white-space: nowrap;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
 @media only screen and (max-width: 390px) {
   h1 {
     font-size: 1.5rem;
@@ -91,12 +101,15 @@ body {
   margin: 0;
   padding: 0;
 }
-:root[data-theme=light] body {
-  background-color: #ffffff;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) body {
+    background-color: #ffffff;
+  }
 }
-
-:root[data-theme=dark] body {
-  background-color: #000000;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) body {
+    background-color: #000000;
+  }
 }
 
 .navbar {
@@ -113,7 +126,7 @@ body {
   padding: 0 1vw;
 }
 .navbar__list {
-  padding: 0 1vw;
+  padding-right: 5vw;
   display: flex;
   justify-content: space-evenly;
   list-style: none;
@@ -122,22 +135,27 @@ body {
 .navbar__list__item {
   border-radius: 5px;
 }
-:root[data-theme=light] .navbar__list__item:hover {
-  background-color: #00ba34;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list__item:hover {
+    background-color: #00ba34;
+  }
 }
-
-:root[data-theme=dark] .navbar__list__item:hover {
-  background-color: #17cb49;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list__item:hover {
+    background-color: #17cb49;
+  }
 }
-
-:root[data-theme=light] .navbar {
-  background-color: #f3f4f6;
-  box-shadow: 0px 0px 7px 0px #222222;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar {
+    background-color: #f3f4f6;
+    box-shadow: 0px 0px 7px 0px #222222;
+  }
 }
-
-:root[data-theme=dark] .navbar {
-  background-color: #222222;
-  box-shadow: 0px 0px 7x 0px #f3f4f6;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar {
+    background-color: #222222;
+    box-shadow: 0px 0px 7px 0px #f3f4f6;
+  }
 }
 
 @media only screen and (max-width: 390px) {
@@ -159,14 +177,16 @@ body {
 .landing {
   padding-top: 15%;
 }
-:root[data-theme=light] .landing {
-  background-color: #ffffff;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .landing {
+    background-color: #ffffff;
+  }
 }
-
-:root[data-theme=dark] .landing {
-  background-color: #000000;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .landing {
+    background-color: #000000;
+  }
 }
-
 @media only screen and (max-width: 390px) {
   .landing {
     display: flex;
@@ -198,15 +218,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-align: center;
+    text-align: left;
   }
   .landing__image {
     width: 50%;
     height: 100%;
   }
 }
-.landing__text > * {
-  padding: 0 3vw;
+.landing__text {
+  padding-right: 3vw;
+}
+.landing__text__image-container img {
+  padding: 0 1vw 0 0;
+  width: 40px;
+  height: 40px;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .landing__text__image-container img:hover {
+    filter: brightness(0.8);
+    filter: drop-shadow(0 0 1px #000000);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .landing__text__image-container img:hover {
+    filter: brightness(1.2);
+    filter: drop-shadow(0 0 1px #ffffff);
+  }
 }
 
 .footer {
@@ -218,12 +255,15 @@ body {
 .footer__span {
   color: #e74c3c;
 }
-:root[data-theme=light] .footer {
-  background-color: #f3f4f6;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .footer {
+    background-color: #f3f4f6;
+  }
 }
-
-:root[data-theme=dark] .footer {
-  background-color: #222222;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .footer {
+    background-color: #222222;
+  }
 }
 
 button {
@@ -234,10 +274,13 @@ button {
 button:hover {
   cursor: pointer;
 }
-:root[data-theme=light] button {
-  background-color: #00ba34;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) button {
+    background-color: #00ba34;
+  }
 }
-
-:root[data-theme=dark] button {
-  background-color: #17cb49;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) button {
+    background-color: #17cb49;
+  }
 }

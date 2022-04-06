@@ -24,14 +24,18 @@ $device-sizes: (phone: 390px,
 
 //Themes
 @mixin light {
-    @at-root #{selector-nest(':root[data-theme=light]', &)} {
-        @content;
+    @media (prefers-color-scheme: light) {
+        @at-root #{selector-nest(':root:not([data-theme=light]):not([data-theme=dark])', &)} {
+            @content;
+        }
     }
 }
 
 @mixin dark {
-    @at-root #{selector-nest(':root[data-theme=dark]', &)} {
-        @content;
+    @media (prefers-color-scheme: dark) {
+        @at-root #{selector-nest(':root:not([data-theme=light]):not([data-theme=dark])', &)} {
+            @content;
+        }
     }
 }
 

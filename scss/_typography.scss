@@ -70,12 +70,14 @@ $letter-spacings: (extra-wide: 0.1rem,
     font-family: map-get($font-family-styles, heading);
     line-height: map-get($line-heights, normal);
     letter-spacing: map-get($letter-spacings, normal);
+    font-weight: map-get($font-weights, bold);
     white-space: nowrap;
 }
 
 
 //headings
-h1 h2,
+h1,
+h2,
 h3,
 h4,
 h5,
@@ -85,6 +87,8 @@ h6 {
 }
 
 h1 {
+    font-size: map-get($font-sizes-headings, h1);
+
     @include m.phone {
         font-size: map-get($font-sizes-headings, h4);
     }
