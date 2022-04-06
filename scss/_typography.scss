@@ -1,5 +1,5 @@
 @use "palette"as p;
-@import "mixins";
+@use "mixins"as m;
 
 
 // Base font
@@ -50,11 +50,11 @@ $letter-spacings: (extra-wide: 0.1rem,
 
 //Data-Theme 
 %data-theme {
-    @include light {
+    @include m.light {
         color: map-get(p.$light-theme-font-colors, primary);
     }
 
-    @include dark {
+    @include m.dark {
         color: map-get(p.$dark-theme-font-colors, primary);
     }
 }

@@ -1,15 +1,15 @@
 @use "palette"as p;
-@import "mixins";
+@use "mixins"as m;
 
 body {
     margin: 0;
     padding: 0;
 
-    @include light {
+    @include m.light {
         background-color: map-get(p.$light-theme-colors, primary);
     }
 
-    @include dark {
+    @include m.dark {
         background-color: map-get(p.$dark-theme-colors, primary);
     }
 }

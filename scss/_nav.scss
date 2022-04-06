@@ -1,5 +1,5 @@
 @use "palette"as p;
-@import "mixins";
+@use "mixins"as m;
 
 .navbar {
     display: flex;
@@ -17,11 +17,11 @@
         }
     }
 
-    @include light {
+    @include m.light {
         background-color: map-get(p.$light-theme-colors, secondary);
     }
 
-    @include dark {
+    @include m.dark {
         background-color: map-get(p.$dark-theme-colors, secondary);
     }
 }
