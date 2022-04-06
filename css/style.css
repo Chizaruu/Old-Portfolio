@@ -1,0 +1,286 @@
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) p,
+:root:not([data-theme=light]):not([data-theme=dark]) a,
+:root:not([data-theme=light]):not([data-theme=dark]) li,
+:root:not([data-theme=light]):not([data-theme=dark]) footer, :root:not([data-theme=light]):not([data-theme=dark]) h1,
+:root:not([data-theme=light]):not([data-theme=dark]) h2,
+:root:not([data-theme=light]):not([data-theme=dark]) h3,
+:root:not([data-theme=light]):not([data-theme=dark]) h4,
+:root:not([data-theme=light]):not([data-theme=dark]) h5,
+:root:not([data-theme=light]):not([data-theme=dark]) h6 {
+    color: black;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) p,
+:root:not([data-theme=light]):not([data-theme=dark]) a,
+:root:not([data-theme=light]):not([data-theme=dark]) li,
+:root:not([data-theme=light]):not([data-theme=dark]) footer, :root:not([data-theme=light]):not([data-theme=dark]) h1,
+:root:not([data-theme=light]):not([data-theme=dark]) h2,
+:root:not([data-theme=light]):not([data-theme=dark]) h3,
+:root:not([data-theme=light]):not([data-theme=dark]) h4,
+:root:not([data-theme=light]):not([data-theme=dark]) h5,
+:root:not([data-theme=light]):not([data-theme=dark]) h6 {
+    color: #ffffff;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+@media only screen and (max-width: 390px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+p,
+a,
+li,
+footer {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 390px) {
+  p,
+a,
+li,
+footer {
+    font-size: 0.625rem;
+  }
+}
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+  p,
+a,
+li,
+footer {
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 769px) {
+  p,
+a,
+li,
+footer {
+    font-size: 1.25rem;
+  }
+}
+
+a,
+footer,
+button {
+  font-weight: 700;
+}
+
+button {
+  color: black;
+}
+
+#youtube {
+  color: #ff0000;
+}
+
+#asterisk {
+  color: #30a5c2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) body {
+    background-color: #ffffff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) body {
+    background-color: #000000;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 5%;
+}
+.navbar a {
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0 1vw;
+}
+.navbar__list {
+  padding-right: 5vw;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 35vw;
+}
+.navbar__list__item {
+  border-radius: 5px;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list__item:hover {
+    background-color: #00ba34;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list__item:hover {
+    background-color: #17cb49;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar {
+    background-color: #f3f4f6;
+    box-shadow: 0px 0px 7px 0px #222222;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar {
+    background-color: #222222;
+    box-shadow: 0px 0px 7px 0px #f3f4f6;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  section {
+    padding: 5px;
+  }
+}
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+  section {
+    padding: 30vh 10vw 20vh 10vw;
+  }
+}
+@media only screen and (min-width: 769px) {
+  section {
+    padding: 30vh 10vw 20vh 10vw;
+  }
+}
+
+.landing {
+  padding-top: 15%;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .landing {
+    background-color: #ffffff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .landing {
+    background-color: #000000;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+  .landing__image {
+    width: 0%;
+    height: 0%;
+  }
+}
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+  .landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .landing__image {
+    width: 75%;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .landing__image {
+    width: 50%;
+    height: 100%;
+  }
+}
+.landing__text {
+  padding-right: 3vw;
+}
+.landing__text__image-container img {
+  padding: 0 1vw 0 0;
+  width: 40px;
+  height: 40px;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .landing__text__image-container img:hover {
+    filter: brightness(0.8);
+    filter: drop-shadow(0 0 1px #000000);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .landing__text__image-container img:hover {
+    filter: brightness(1.2);
+    filter: drop-shadow(0 0 1px #ffffff);
+  }
+}
+
+.footer {
+  padding: 15px;
+}
+.footer--center {
+  text-align: center;
+}
+.footer__span {
+  color: #e74c3c;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .footer {
+    background-color: #f3f4f6;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .footer {
+    background-color: #222222;
+  }
+}
+
+button {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+button:hover {
+  cursor: pointer;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) button {
+    background-color: #00ba34;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) button {
+    background-color: #17cb49;
+  }
+}

@@ -1,25 +1,63 @@
 <!DOCTYPE html>
-<html data-theme="dark" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Abdul Kadir Coskun's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/icon" href="images/cat.jpg">
+    <title>Chizaruu's Portfolio</title>
 </head>
 
 <body>
     <nav class="navbar">
-        <a class="navbar__link" href="index.html">
-            < Abdul-Kadir Coskun /></a>
+        <a class="navbar__link" href="index.html" title="Hello World!">
+            < Abdul Kadir Coskun /></a>
         <ul class="navbar__list">
-            <li class="navbar__list__item"><a href="#landing">Home</a></li>
-            <li class="navbar__list__item"><a href="#about">About</a></li>
-            <li class="navbar__list__item"><a href="#projects">Projects</a></li>
-            <li class="navbar__list__item"><a href="#contact">Contact</a></li>
+            <li class="navbar__list__item">
+                <div>
+                    <a href="#landing" title="Let's take it from the top.">Home</a>
+                </div>
+            </li>
+            <li class="navbar__list__item">
+                <div>
+                    <a href="#about" title="Could be private! D:">About</a>
+                </div>
+            </li>
+            <li class="navbar__list__item">
+                <div><a href="#projects" title="~Stuff I had fun making~">Projects</a></div>
+            </li>
+            <li class="navbar__list__item">
+                <div><a href="#contact" title="We meeting next week?">Contact</a></div>
+            </li>
         </ul>
     </nav>
+    <section class="landing" id="landing">
+        <div class="landing__text">
+            <h1>Hi, I'm Abdul Kadir</h1>
+            <p>
+                I'm a Front-End(<span id="asterisk" title="Training with _nology">*</span>) / Game developer. I'm
+                currently working as
+                a freelancer while creating
+                content on
+                <a id="youtube" href="https://www.youtube.com/channel/UC8__XEn9chu9LYDxFC4WzIA" target="_blank"
+                    rel="noopener noreferrer" title="My channel! :)">Youtube</a>
+                for the Unity Engine.
+            </p>
+            <div class="landing__text__image-container">
+                <a href="https://www.linkedin.com/in/abdul-kadir-coskun/" target="_blank" rel="noopener noreferrer"><img
+                        src="images/linkedin.png" alt="Linkedin" title="Connect soon, kay?"></a>
+                <a href="https://github.com/Chizaruu" target="_blank" rel="noopener noreferrer"><img
+                        src="images/github.png" alt="Github" title="This is where I keep the stuff."></a>
+                <a href="https://chizaruu.itch.io/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/itch.svg" alt="Itch" title="Erm, I made some playable stuff.">
+                </a>
+            </div>
+        </div>
+        <img class="landing__image" src="images/Coder-Transparent-PNG.png" alt="alt= Some guy coding"
+            title="That's not me...">
+    </section>
     <footer class="footer footer--center">
         Made with <span class="footer__span" title="~latvia~">&hearts;</span> by Abdul-Kadir Coskun
     </footer>
