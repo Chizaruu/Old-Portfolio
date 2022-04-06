@@ -9,7 +9,7 @@
     }
 
     &__span {
-        color: p.$heart-color;
+        color: map-get(p.$special-colors, heart);
     }
 
     @include m.light {

@@ -23,13 +23,20 @@ $font-weights: (bolder: 900,
 
 
 // Font size
-$font-sizes: (h1:2.5rem,
+$font-sizes-headings: (h1:2.5rem,
     h2:2rem,
     h3:1.75rem,
     h4:1.5rem,
     h5:1.25rem,
     h6:1rem,
-    base:0.75rem,
+);
+
+$font-sizes-text: (base:0.75rem,
+    small:0.625rem,
+    medium:0.875rem,
+    large:1rem,
+    xlarge:1.25rem,
+    xxlarge:1.5rem,
 );
 
 
@@ -59,28 +66,29 @@ $letter-spacings: (extra-wide: 0.1rem,
     }
 }
 
+%font-headings {
+    font-family: map-get($font-family-styles, heading);
+    line-height: map-get($line-heights, normal);
+    letter-spacing: map-get($letter-spacings, normal);
+    white-space: nowrap;
+}
+
 
 //headings
-h1,
-h2,
+h1 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: map-get($font-family-styles, heading);
-    line-height: map-get($line-heights, normal);
-    letter-spacing: map-get($letter-spacings, normal);
+    @extend %font-headings;
     @extend %data-theme;
 }
 
-@for $i from 1 through 6 {
-    $font-size-heading: nth($font-sizes, $i);
-
-    h#{$i} {
-        font-size: $font-size-heading;
+h1 {
+    @include m.phone {
+        font-size: map-get($font-sizes-headings, h4);
     }
 }
-
 
 //text
 p,
@@ -90,14 +98,35 @@ footer {
     font-family: map-get($font-family-styles, base);
     line-height: map-get($line-heights, normal);
 
+    @include m.phone {
+        font-size: map-get($font-sizes-text, small);
+    }
+
+    @include m.tablet {
+        font-size: map-get($font-sizes-text, medium);
+    }
+
+    @include m.desktop {
+        font-size: map-get($font-sizes-text, xlarge);
+    }
+
     @extend %data-theme;
 }
 
 a,
-footer {
+footer,
+button {
     font-weight: map-get($font-weights, bold);
 }
 
-a {
-    text-decoration: none;
+button {
+    color: map-get(p.$light-theme-font-colors, primary);
+}
+
+#youtube {
+    color: map-get(p.$special-colors, youtube);
+}
+
+#asterisk {
+    color: map-get(p.$special-colors, asterisk);
 }

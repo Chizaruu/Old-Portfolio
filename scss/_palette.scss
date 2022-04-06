@@ -15,7 +15,7 @@ $dark-theme-colors: (primary: #000000,
 );
 
 
-//Group of font colors
+//Groups of font colors
 $light-theme-font-colors: (primary: black,
     secondary: #00ba34,
 );
@@ -25,5 +25,8 @@ $dark-theme-font-colors: (primary: #ffffff,
 );
 
 
-//Special colors
-$heart-color: #e74c3c;
+//Group of special colors
+$special-colors: (heart: #e74c3c,
+    youtube: #ff0000,
+    asterisk: #30a5c2,
+);

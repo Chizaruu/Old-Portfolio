@@ -1,0 +1,67 @@
+@use "palette"as p;
+@use "mixins"as m;
+
+section {
+    @include m.phone {
+        padding: 5px;
+    }
+
+    @include m.tablet {
+        padding: 30vh 10vw 20vh 10vw;
+    }
+
+    @include m.desktop {
+        padding: 30vh 10vw 20vh 10vw;
+    }
+}
+
+.landing {
+    padding-top: 15%;
+
+    @include m.light {
+        background-color: map-get(p.$light-theme-colors, primary);
+    }
+
+    @include m.dark {
+        background-color: map-get(p.$dark-theme-colors, primary);
+    }
+
+    @include m.phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+
+        &__image {
+            @include m.display-image(map-get(m.$device-sizes, phone));
+        }
+    }
+
+    @include m.tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &__image {
+            @include m.display-image(map-get(m.$device-sizes, tablet));
+        }
+    }
+
+    @include m.desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+
+        &__image {
+            @include m.display-image(map-get(m.$device-sizes, desktop));
+        }
+    }
+
+    &__text>* {
+        padding: 0 3vw;
+    }
+}
