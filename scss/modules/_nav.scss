@@ -8,17 +8,12 @@
     align-items: center;
     padding: 5px 40px 0 40px;
 
-    &__link {
-        font-weight: t.$font-xlarge;
-    }
-
     &__list {
         display: flex;
         justify-content: space-around;
         list-style: none;
 
         &__item {
-            font-weight: t.$font-large;
             padding: 0 20px 0 20px;
         }
     }
