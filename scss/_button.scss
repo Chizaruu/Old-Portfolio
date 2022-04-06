@@ -1,0 +1,20 @@
+@use "palette"as p;
+
+.button {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: inherit;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include light {
+        background-color: p.$light-mode-primary-bg-color;
+    }
+
+    @include dark {
+        background-color: p.$dark-mode-primary-bg-color;
+    }
+}

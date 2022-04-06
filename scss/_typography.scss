@@ -1,0 +1,103 @@
+@use "palette"as p;
+@import "mixins";
+
+
+// Base font
+$font-family-styles: (heading: ('Roboto Slab',
+        'Helvetica Neue',
+        Arial,
+        sans-serif),
+    base: ('Roboto',
+        'Helvetica Neue',
+        Arial,
+        sans-serif),
+);
+
+
+// Font weights
+$font-weights: (bolder: 900,
+    bold: 700,
+    normal: 500,
+    light: 300,
+);
+
+
+// Font size
+$font-sizes: (h1:2.5rem,
+    h2:2rem,
+    h3:1.75rem,
+    h4:1.5rem,
+    h5:1.25rem,
+    h6:1rem,
+    base:0.75rem,
+);
+
+
+// Line-height
+$line-heights: (loose: 1.75,
+    normal: 1.5,
+    tight: 1.25,
+);
+
+
+// Letter-spacing
+$letter-spacings: (extra-wide: 0.1rem,
+    wide: 0.05rem,
+    normal: 0,
+    tight: -0.05rem,
+);
+
+
+//Data-Theme 
+%data-theme {
+    @include light {
+        color: map-get(p.$light-theme-font-colors, primary);
+    }
+
+    @include dark {
+        color: map-get(p.$dark-theme-font-colors, primary);
+    }
+}
+
+
+//headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: map-get($font-family-styles, heading);
+    line-height: map-get($line-heights, normal);
+    letter-spacing: map-get($letter-spacings, normal);
+    @extend %data-theme;
+}
+
+@for $i from 1 through 6 {
+    $font-size-heading: nth($font-sizes, $i);
+
+    h#{$i} {
+        font-size: $font-size-heading;
+    }
+}
+
+
+//text
+p,
+a,
+li,
+footer {
+    font-family: map-get($font-family-styles, base);
+    line-height: map-get($line-heights, normal);
+
+    @extend %data-theme;
+}
+
+a,
+footer {
+    font-weight: map-get($font-weights, bold);
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,22 @@
+@use "palette"as p;
+@import "mixins";
+
+.footer {
+    padding: 15px;
+
+    &--center {
+        text-align: center;
+    }
+
+    &__span {
+        color: p.$heart-color;
+    }
+
+    @include light {
+        background-color: map-get(p.$light-theme-colors, secondary);
+    }
+
+    @include dark {
+        background-color: map-get(p.$dark-theme-colors, secondary);
+    }
+}

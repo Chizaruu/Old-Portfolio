@@ -1,6 +1,5 @@
-@use "../partials/palette"as p;
-@use "../partials/typography"as t;
-@import "../partials/mixins";
+@use "palette"as p;
+@import "mixins";
 
 .navbar {
     display: flex;
@@ -19,10 +18,10 @@
     }
 
     @include light {
-        background-color: p.$light-mode-secondary-bg-color;
+        background-color: map-get(p.$light-theme-colors, secondary);
     }
 
     @include dark {
-        background-color: p.$dark-mode-secondary-bg-color;
+        background-color: map-get(p.$dark-theme-colors, secondary);
     }
 }
