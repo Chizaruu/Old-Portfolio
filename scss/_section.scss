@@ -1,31 +1,36 @@
 @use "palette"as p;
 @use "mixins"as m;
 
+@mixin section-background {
+    @include m.light {
+        background-color: map-get(p.$light-theme-colors, secondary);
+    }
+
+    @include m.dark {
+        background-color: map-get(p.$dark-theme-colors, secondary);
+    }
+}
+
 section {
+    $section-padding-default: (phone: (5vh 7vw),
+            tablet: (30vh 10vw 20vh),
+            desktop: (30vh 10vw 35vh),
+        );
+
     @include m.phone {
-        padding: 5px;
+        padding: map-get($section-padding-default, phone);
     }
 
     @include m.tablet {
-        padding: 30vh 10vw 20vh 10vw;
+        padding: map-get($section-padding-default, tablet);
     }
 
     @include m.desktop {
-        padding: 30vh 10vw 20vh 10vw;
+        padding: map-get($section-padding-default, desktop);
     }
 }
 
 .landing {
-    padding-top: 15%;
-
-    @include m.light {
-        background-color: map-get(p.$light-theme-colors, primary);
-    }
-
-    @include m.dark {
-        background-color: map-get(p.$dark-theme-colors, primary);
-    }
-
     @include m.phone {
         display: flex;
         flex-direction: column;
@@ -84,4 +89,8 @@ section {
             }
         }
     }
+}
+
+.about {
+    @include section-background;
 }
