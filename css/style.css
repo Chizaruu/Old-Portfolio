@@ -185,6 +185,7 @@ body {
 
 @media only screen and (max-width: 390px) {
   .landing {
+    padding-top: 25vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -227,8 +228,8 @@ body {
 }
 .landing__text__image-container img {
   padding: 0 1vw 0 0;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .landing__text__image-container img:hover {
@@ -270,6 +271,62 @@ body {
   :root:not([data-theme=light]):not([data-theme=dark]) .about {
     background-color: #222222;
   }
+}
+
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+}
+.skills__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.skills__container__item {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  width: 12rem;
+  margin: 1rem;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .skills__container__item {
+    background-color: #f3f4f6;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .skills__container__item {
+    background-color: #222222;
+  }
+}
+.skills__container__item__image {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .skills__container__item__image--invert {
+    filter: invert(1);
+  }
+}
+.skills__container__item__name {
+  margin-left: 1rem;
 }
 
 .footer {
