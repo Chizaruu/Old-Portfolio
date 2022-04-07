@@ -21,8 +21,8 @@
 
 section {
     $section-padding-default: (phone: (15vh 7vw),
-            tablet: (30vh 10vw 20vh),
-            desktop: (30vh 10vw 35vh),
+            tablet: (30vh 10vw 40vh),
+            desktop: (35vh 10vw 40vh),
         );
 
     @include m.phone {

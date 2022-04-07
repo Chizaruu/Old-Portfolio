@@ -174,12 +174,12 @@ body {
 }
 @media only screen and (min-width: 391px) and (max-width: 768px) {
   section {
-    padding: 30vh 10vw 20vh;
+    padding: 30vh 10vw 40vh;
   }
 }
 @media only screen and (min-width: 769px) {
   section {
-    padding: 30vh 10vw 35vh;
+    padding: 35vh 10vw 40vh;
   }
 }
 
