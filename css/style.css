@@ -39,10 +39,19 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 @media only screen and (max-width: 390px) {
   h1 {
+    font-size: 1.75rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+@media only screen and (max-width: 390px) {
+  h2 {
     font-size: 1.5rem;
   }
 }
@@ -160,33 +169,20 @@ body {
 
 @media only screen and (max-width: 390px) {
   section {
-    padding: 5px;
+    padding: 15vh 7vw;
   }
 }
 @media only screen and (min-width: 391px) and (max-width: 768px) {
   section {
-    padding: 30vh 10vw 20vh 10vw;
+    padding: 30vh 10vw 20vh;
   }
 }
 @media only screen and (min-width: 769px) {
   section {
-    padding: 30vh 10vw 20vh 10vw;
+    padding: 30vh 10vw 35vh;
   }
 }
 
-.landing {
-  padding-top: 15%;
-}
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme=light]):not([data-theme=dark]) .landing {
-    background-color: #ffffff;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([data-theme=dark]) .landing {
-    background-color: #000000;
-  }
-}
 @media only screen and (max-width: 390px) {
   .landing {
     display: flex;
@@ -216,6 +212,7 @@ body {
 @media only screen and (min-width: 769px) {
   .landing {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     text-align: left;
@@ -243,6 +240,35 @@ body {
   :root:not([data-theme=light]):not([data-theme=dark]) .landing__text__image-container img:hover {
     filter: brightness(1.2);
     filter: drop-shadow(0 0 1px #ffffff);
+  }
+}
+
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .about {
+    background-color: #f3f4f6;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .about {
+    background-color: #222222;
   }
 }
 

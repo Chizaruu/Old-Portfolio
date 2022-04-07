@@ -23,12 +23,12 @@ $font-weights: (bolder: 900,
 
 
 // Font size
-$font-sizes-headings: (h1:2.5rem,
-    h2:2rem,
-    h3:1.75rem,
-    h4:1.5rem,
-    h5:1.25rem,
-    h6:1rem,
+$font-sizes-headings: (h1:3rem,
+    h2:2.5rem,
+    h3:2rem,
+    h4:1.75rem,
+    h5:1.5rem,
+    h6:1.25rem,
 );
 
 $font-sizes-text: (base:0.75rem,
@@ -91,6 +91,14 @@ h1 {
 
     @include m.phone {
         font-size: map-get($font-sizes-headings, h4);
+    }
+}
+
+h2 {
+    font-size: map-get($font-sizes-headings, h2);
+
+    @include m.phone {
+        font-size: map-get($font-sizes-headings, h5);
     }
 }
 
