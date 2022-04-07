@@ -19,10 +19,15 @@
     text-align: $text-align;
 }
 
+@mixin section-display-icon {
+    width: 48px;
+    height: 48px;
+}
+
 section {
     $section-padding-default: (phone: (15vh 7vw),
-            tablet: (30vh 10vw 20vh),
-            desktop: (30vh 10vw 35vh),
+            tablet: (30vh 10vw 40vh),
+            desktop: (35vh 10vw 40vh),
         );
 
     @include m.phone {
@@ -40,6 +45,7 @@ section {
 
 .landing {
     @include m.phone {
+        padding-top: 25vh;
         @include section-display(flex, column, center, center, left);
 
         &__image {
@@ -69,8 +75,7 @@ section {
         &__image-container {
             img {
                 padding: 0 1vw 0 0;
-                width: 40px;
-                height: 40px;
+                @include section-display-icon;
 
                 &:hover {
                     @include m.light {
@@ -98,4 +103,53 @@ section {
     }
 
     @include section-background;
+}
+
+.skills {
+    @include m.tablet {
+        @include section-display(flex, column, center, center, center);
+    }
+
+    @include m.desktop {
+        @include section-display(flex, column, center, center, left);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+
+        &__item {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            width: 12rem;
+            margin: 1rem;
+
+            @include m.light {
+                background-color: map-get(p.$light-theme-colors, secondary);
+            }
+
+            @include m.dark {
+                background-color: map-get(p.$dark-theme-colors, secondary);
+            }
+
+            &__image {
+                display: block;
+                @include section-display-icon;
+
+                @include m.light {
+                    &--invert {
+                        filter: invert(1);
+                    }
+                }
+            }
+
+            &__name {
+                margin-left: 1rem;
+            }
+        }
+    }
 }
