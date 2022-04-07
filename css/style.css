@@ -169,7 +169,7 @@ body {
 
 @media only screen and (max-width: 390px) {
   section {
-    padding: 5vh 7vw;
+    padding: 15vh 7vw;
   }
 }
 @media only screen and (min-width: 391px) and (max-width: 768px) {
@@ -212,6 +212,7 @@ body {
 @media only screen and (min-width: 769px) {
   .landing {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     text-align: left;
@@ -242,6 +243,24 @@ body {
   }
 }
 
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+}
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .about {
     background-color: #f3f4f6;

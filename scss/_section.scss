@@ -11,8 +11,16 @@
     }
 }
 
+@mixin section-display ($display, $flex-direction, $align-items, $justify-content, $text-align) {
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    text-align: $text-align;
+}
+
 section {
-    $section-padding-default: (phone: (5vh 7vw),
+    $section-padding-default: (phone: (15vh 7vw),
             tablet: (30vh 10vw 20vh),
             desktop: (30vh 10vw 35vh),
         );
@@ -32,11 +40,7 @@ section {
 
 .landing {
     @include m.phone {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
+        @include section-display(flex, column, center, center, left);
 
         &__image {
             @include m.display-image(map-get(m.$device-sizes, phone));
@@ -44,11 +48,7 @@ section {
     }
 
     @include m.tablet {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+        @include section-display(flex, column, center, center, center);
 
         &__image {
             @include m.display-image(map-get(m.$device-sizes, tablet));
@@ -56,10 +56,7 @@ section {
     }
 
     @include m.desktop {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        text-align: left;
+        @include section-display(flex, row, center, space-between, left);
 
         &__image {
             @include m.display-image(map-get(m.$device-sizes, desktop));
@@ -92,5 +89,13 @@ section {
 }
 
 .about {
+    @include m.tablet {
+        @include section-display(flex, column, center, center, center);
+    }
+
+    @include m.desktop {
+        @include section-display(flex, column, center, center, left);
+    }
+
     @include section-background;
 }
