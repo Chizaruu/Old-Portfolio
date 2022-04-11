@@ -533,35 +533,41 @@ body {
   height: 100%;
 }
 
-.stars {
-  z-index: -3;
-  background: transparent url("/images/stars.webp") repeat top center;
-}
-
-.twinkling {
-  z-index: -2;
-  background: transparent url("/images/twinkling.webp") repeat top center;
-  animation: move-twink-back 200s linear infinite;
-}
-@keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -10000px 5000px;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .stars {
+    z-index: -3;
+    background: transparent url("/images/stars.webp") repeat top center;
   }
 }
 
-.clouds {
-  z-index: -1;
-  background: transparent url("/images/clouds.webp") repeat top center;
-  animation: move-clouds-back 200s linear infinite;
-}
-@keyframes move-clouds-back {
-  from {
-    background-position: 0 0;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .twinkling {
+    z-index: -2;
+    background: transparent url("/images/twinkling.webp") repeat top center;
+    animation: move-twink-back 200s linear infinite;
   }
-  to {
-    background-position: 10000px 0;
+  @keyframes move-twink-back {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -10000px 5000px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .clouds {
+    z-index: -1;
+    background: transparent url("/images/clouds.webp") repeat top center;
+    animation: move-clouds-back 200s linear infinite;
+  }
+  @keyframes move-clouds-back {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 10000px 0;
+    }
   }
 }

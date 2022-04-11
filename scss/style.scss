@@ -23,6 +23,8 @@ body {
     }
 }
 
+
+
 .stars,
 .twinkling,
 .clouds {
@@ -31,38 +33,44 @@ body {
 }
 
 .stars {
-    z-index: -3;
-    background: transparent url('/images/stars.webp') repeat top center;
+    @include m.dark {
+        z-index: -3;
+        background: transparent url('/images/stars.webp') repeat top center;
+    }
 }
 
 .twinkling {
-    z-index: -2;
-    background: transparent url('/images/twinkling.webp') repeat top center;
-    animation: move-twink-back 200s linear infinite;
+    @include m.dark {
+        z-index: -2;
+        background: transparent url('/images/twinkling.webp') repeat top center;
+        animation: move-twink-back 200s linear infinite;
 
-    @keyframes move-twink-back {
-        from {
-            background-position: 0 0;
-        }
+        @keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
 
-        to {
-            background-position: -10000px 5000px;
+            to {
+                background-position: -10000px 5000px;
+            }
         }
     }
 }
 
 .clouds {
-    z-index: -1;
-    background: transparent url('/images/clouds.webp') repeat top center;
-    animation: move-clouds-back 200s linear infinite;
+    @include m.dark {
+        z-index: -1;
+        background: transparent url('/images/clouds.webp') repeat top center;
+        animation: move-clouds-back 200s linear infinite;
 
-    @keyframes move-clouds-back {
-        from {
-            background-position: 0 0;
-        }
+        @keyframes move-clouds-back {
+            from {
+                background-position: 0 0;
+            }
 
-        to {
-            background-position: 10000px 0;
+            to {
+                background-position: 10000px 0;
+            }
         }
     }
 }
