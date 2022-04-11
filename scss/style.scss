@@ -1,6 +1,24 @@
 @use "typography";
-@use "body";
 @use "nav";
 @use "section";
 @use "footer";
 @use "button";
+@use "palette"as p;
+@use "mixins"as m;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    @include m.light {
+        background-color: map-get(p.$light-theme-colors, primary);
+    }
+
+    @include m.dark {
+        background-color: map-get(p.$dark-theme-colors, primary);
+    }
+}

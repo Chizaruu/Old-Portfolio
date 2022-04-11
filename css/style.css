@@ -106,21 +106,6 @@ button {
   color: #30a5c2;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme=light]):not([data-theme=dark]) body {
-    background-color: #ffffff;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([data-theme=dark]) body {
-    background-color: #000000;
-  }
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -519,5 +504,24 @@ button:hover {
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme=light]):not([data-theme=dark]) button {
     background-color: #17cb49;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) body {
+    background-color: #ffffff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) body {
+    background-color: #000000;
   }
 }
