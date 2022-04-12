@@ -57,11 +57,19 @@
             justify-content: space-evenly;
             width: 35vw;
             padding-right: 5vw;
+            align-items: center;
+            height: 100%;
         }
 
         &__item {
             border-radius: 5px;
-            align-items: center;
+
+            a {
+                display: flex;
+                height: 100%;
+                padding: 0.3em 0.5em;
+                align-self: stretch;
+            }
 
             &:hover {
                 @include m.light {

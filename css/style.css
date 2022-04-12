@@ -213,9 +213,14 @@ button {
     background-color: #222222;
   }
 }
-@media only screen and (max-width: 450px) and (max-width: 450px) {
-  .navbar__list > li:not(:last-child) {
-    border-bottom: 1px solid #444;
+@media only screen and (max-width: 450px) and (max-width: 450px) and (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #f3f4f6;
+  }
+}
+@media only screen and (max-width: 450px) and (max-width: 450px) and (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #222222;
   }
 }
 @media only screen and (max-width: 450px) and (min-width: 451px) and (max-width: 880px) {
@@ -249,9 +254,14 @@ button {
     background-color: #222222;
   }
 }
-@media only screen and (max-width: 450px) and (min-width: 451px) and (max-width: 880px) {
-  .navbar__list > li:not(:last-child) {
-    border-bottom: 1px solid #444;
+@media only screen and (max-width: 450px) and (min-width: 451px) and (max-width: 880px) and (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #f3f4f6;
+  }
+}
+@media only screen and (max-width: 450px) and (min-width: 451px) and (max-width: 880px) and (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #222222;
   }
 }
 @media only screen and (max-width: 450px) and (min-width: 881px) {
@@ -260,12 +270,19 @@ button {
     justify-content: space-evenly;
     width: 35vw;
     padding-right: 5vw;
+    align-items: center;
+    height: 100%;
   }
 }
 @media only screen and (max-width: 450px) {
   .navbar__list__item {
     border-radius: 5px;
-    align-items: center;
+  }
+  .navbar__list__item a {
+    display: flex;
+    height: 100%;
+    padding: 0.3em 0.5em;
+    align-self: stretch;
   }
 }
 @media only screen and (max-width: 450px) and (prefers-color-scheme: light) {
@@ -356,9 +373,14 @@ button {
     background-color: #222222;
   }
 }
-@media only screen and (min-width: 451px) and (max-width: 880px) and (max-width: 450px) {
-  .navbar__list > li:not(:last-child) {
-    border-bottom: 1px solid #444;
+@media only screen and (min-width: 451px) and (max-width: 880px) and (max-width: 450px) and (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #f3f4f6;
+  }
+}
+@media only screen and (min-width: 451px) and (max-width: 880px) and (max-width: 450px) and (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #222222;
   }
 }
 @media only screen and (min-width: 451px) and (max-width: 880px) and (min-width: 451px) and (max-width: 880px) {
@@ -392,9 +414,14 @@ button {
     background-color: #222222;
   }
 }
-@media only screen and (min-width: 451px) and (max-width: 880px) and (min-width: 451px) and (max-width: 880px) {
-  .navbar__list > li:not(:last-child) {
-    border-bottom: 1px solid #444;
+@media only screen and (min-width: 451px) and (max-width: 880px) and (min-width: 451px) and (max-width: 880px) and (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #f3f4f6;
+  }
+}
+@media only screen and (min-width: 451px) and (max-width: 880px) and (min-width: 451px) and (max-width: 880px) and (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #222222;
   }
 }
 @media only screen and (min-width: 451px) and (max-width: 880px) and (min-width: 881px) {
@@ -403,12 +430,19 @@ button {
     justify-content: space-evenly;
     width: 35vw;
     padding-right: 5vw;
+    align-items: center;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 451px) and (max-width: 880px) {
   .navbar__list__item {
     border-radius: 5px;
-    align-items: center;
+  }
+  .navbar__list__item a {
+    display: flex;
+    height: 100%;
+    padding: 0.3em 0.5em;
+    align-self: stretch;
   }
 }
 @media only screen and (min-width: 451px) and (max-width: 880px) and (prefers-color-scheme: light) {
@@ -499,9 +533,14 @@ button {
     background-color: #222222;
   }
 }
-@media only screen and (min-width: 881px) and (max-width: 450px) {
-  .navbar__list > li:not(:last-child) {
-    border-bottom: 1px solid #444;
+@media only screen and (min-width: 881px) and (max-width: 450px) and (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #f3f4f6;
+  }
+}
+@media only screen and (min-width: 881px) and (max-width: 450px) and (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #222222;
   }
 }
 @media only screen and (min-width: 881px) and (min-width: 451px) and (max-width: 880px) {
@@ -535,9 +574,14 @@ button {
     background-color: #222222;
   }
 }
-@media only screen and (min-width: 881px) and (min-width: 451px) and (max-width: 880px) {
-  .navbar__list > li:not(:last-child) {
-    border-bottom: 1px solid #444;
+@media only screen and (min-width: 881px) and (min-width: 451px) and (max-width: 880px) and (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #f3f4f6;
+  }
+}
+@media only screen and (min-width: 881px) and (min-width: 451px) and (max-width: 880px) and (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list > li:not(:last-child) {
+    border-bottom: 1px solid #222222;
   }
 }
 @media only screen and (min-width: 881px) and (min-width: 881px) {
@@ -546,12 +590,19 @@ button {
     justify-content: space-evenly;
     width: 35vw;
     padding-right: 5vw;
+    align-items: center;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 881px) {
   .navbar__list__item {
     border-radius: 5px;
-    align-items: center;
+  }
+  .navbar__list__item a {
+    display: flex;
+    height: 100%;
+    padding: 0.3em 0.5em;
+    align-self: stretch;
   }
 }
 @media only screen and (min-width: 881px) and (prefers-color-scheme: light) {
