@@ -5,7 +5,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    margin: 46px 0 0 0;
+    margin: 5vh 0 0 0;
     padding: 0;
     flex-direction: column;
     width: 100%;
@@ -57,10 +57,14 @@
             justify-content: space-evenly;
             width: 35vw;
             padding-right: 5vw;
+            align-items: center;
+            height: 100%;
         }
 
         &__item {
             border-radius: 5px;
+            height: 100%;
+            display: flex;
             align-items: center;
 
             &:hover {
