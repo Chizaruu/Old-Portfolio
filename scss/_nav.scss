@@ -19,12 +19,24 @@
         margin: 0;
         padding: 0.5em 0;
         width: 100%;
-        color: white;
-        background-color: #222;
+
+        @include m.light {
+            background-color: map-get(p.$light-theme-colors, secondary);
+        }
+
+        @include m.dark {
+            background-color: map-get(p.$dark-theme-colors, secondary);
+        }
     }
 
     &>li:not(:last-child) {
-        border-bottom: 1px solid #444;
+        @include m.light {
+            border-bottom: 1px solid map-get(p.$light-theme-colors, secondary);
+        }
+
+        @include m.dark {
+            border-bottom: 1px solid map-get(p.$dark-theme-colors, secondary);
+        }
     }
 }
 
@@ -80,12 +92,19 @@
         &__button::before,
         &__button::after {
             display: block;
-            background-color: #fff;
             position: absolute;
             height: 4px;
             width: 30px;
             transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
             border-radius: 2px;
+
+            @include m.light {
+                background-color: map-get(p.$dark-theme-colors, secondary);
+            }
+
+            @include m.dark {
+                background-color: map-get(p.$light-theme-colors, secondary);
+            }
         }
 
         &__button::before {
@@ -171,7 +190,14 @@
     }
 
     #hamburger-toggle:checked~.navbar__list li {
-        border: 1px solid #333;
+        @include m.light {
+            border: 1px solid map-get(p.$light-theme-colors, quinary);
+        }
+
+        @include m.dark {
+            border: 1px solid map-get(p.$dark-theme-colors, quinary);
+        }
+
         height: 2.5em;
         padding: 0.5em;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
