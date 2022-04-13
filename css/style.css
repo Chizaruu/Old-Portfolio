@@ -756,12 +756,11 @@ button {
 }
 .landing__text__image-container__link__icon {
   padding: 0 1vw 0 0;
-  width: 48px;
-  height: 48px;
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .landing__text__image-container__link__icon--invert {
     filter: invert(1);
+    z-index: 0;
   }
 }
 @media (prefers-color-scheme: light) {
@@ -816,13 +815,10 @@ button {
   width: 12rem;
   margin: 1rem;
 }
-.skills__container__item__icon {
-  width: 48px;
-  height: 48px;
-}
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .skills__container__item__icon--invert {
     filter: invert(1);
+    z-index: 0;
   }
 }
 .skills__container__item__name {
@@ -937,13 +933,10 @@ button {
   flex-direction: column;
   align-items: center;
 }
-.projects__container__item__link-divider__link__icon {
-  width: 48px;
-  height: 48px;
-}
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .projects__container__item__link-divider__link__icon--invert {
     filter: invert(1);
+    z-index: 0;
   }
 }
 @media (prefers-color-scheme: light) {
@@ -977,13 +970,10 @@ button {
 .contact__container__item {
   padding: 0 1rem;
 }
-.contact__container__item__icon {
-  width: 48px;
-  height: 48px;
-}
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .contact__container__item__icon--invert {
     filter: invert(1);
+    z-index: 0;
   }
 }
 
