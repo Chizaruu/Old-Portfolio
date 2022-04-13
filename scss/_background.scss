@@ -10,7 +10,7 @@
 
 .background {
     @include m.light {
-        background: url('../images/box.webp') repeat 0 0;
+        background: url('../images/animations/box.webp') repeat 0 0;
         animation: bg-scrolling-reverse .7s infinite;
         animation-timing-function: linear;
 
@@ -23,14 +23,14 @@
 
     @include m.dark {
         z-index: -3;
-        background: map-get(p.$dark-theme-colors, primary) url('../images/stars.webp') repeat top center;
+        background: map-get(p.$dark-theme-colors, primary) url('../images/animations/stars.webp') repeat top center;
     }
 }
 
 .twinkling {
     @include m.dark {
         z-index: -2;
-        background: transparent url('../images/twinkling.webp') repeat top center;
+        background: transparent url('../images/animations/twinkling.webp') repeat top center;
         animation: move-twink-back 200s linear infinite;
 
         @keyframes move-twink-back {
@@ -48,7 +48,7 @@
 .clouds {
     @include m.dark {
         z-index: -1;
-        background: transparent url('../images/clouds.webp') repeat top center;
+        background: transparent url('../images/animations/clouds.webp') repeat top center;
         animation: move-clouds-back 200s linear infinite;
 
         @keyframes move-clouds-back {
