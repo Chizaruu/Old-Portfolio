@@ -868,11 +868,25 @@ button {
 .projects__container__item {
   padding: 5rem 1.3rem 1rem 1.3rem;
   border-radius: 0.5rem;
-  width: 25.5rem;
-  margin: 1rem;
+  margin: 1vh 1vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media only screen and (max-width: 450px) {
+  .projects__container__item {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 451px) and (max-width: 880px) {
+  .projects__container__item {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 881px) {
+  .projects__container__item {
+    width: 20vw;
+  }
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .projects__container__item {
@@ -911,7 +925,7 @@ button {
 }
 .projects__container__item__info-divider__description {
   margin-top: 1rem 0;
-  text-align: left;
+  text-align: center;
 }
 .projects__container__item__link-divider {
   display: flex;
