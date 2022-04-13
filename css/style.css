@@ -115,7 +115,7 @@ button {
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .background {
-    background: url("../images/box.webp") repeat 0 0;
+    background: url("../images/animations/box.webp") repeat 0 0;
     animation: bg-scrolling-reverse 0.7s infinite;
     animation-timing-function: linear;
   }
@@ -128,14 +128,14 @@ button {
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme=light]):not([data-theme=dark]) .background {
     z-index: -3;
-    background: #000000 url("../images/stars.webp") repeat top center;
+    background: #000000 url("../images/animations/stars.webp") repeat top center;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme=light]):not([data-theme=dark]) .twinkling {
     z-index: -2;
-    background: transparent url("../images/twinkling.webp") repeat top center;
+    background: transparent url("../images/animations/twinkling.webp") repeat top center;
     animation: move-twink-back 200s linear infinite;
   }
   @keyframes move-twink-back {
@@ -151,7 +151,7 @@ button {
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme=light]):not([data-theme=dark]) .clouds {
     z-index: -1;
-    background: transparent url("../images/clouds.webp") repeat top center;
+    background: transparent url("../images/animations/clouds.webp") repeat top center;
     animation: move-clouds-back 200s linear infinite;
   }
   @keyframes move-clouds-back {
