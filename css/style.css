@@ -810,9 +810,17 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   display: flex;
-  align-items: center;
-  width: 12rem;
   margin: 1rem;
+}
+@media only screen and (min-width: 451px) and (max-width: 880px) {
+  .skills__container__item {
+    width: 12rem;
+  }
+}
+@media only screen and (min-width: 881px) {
+  .skills__container__item {
+    width: 12rem;
+  }
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .skills__container__item__icon--invert {
@@ -821,6 +829,11 @@ button {
 }
 .skills__container__item__name {
   margin-left: 1rem;
+}
+@media only screen and (max-width: 450px) {
+  .skills__container__item__name {
+    display: none;
+  }
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .skills__container__item:hover {

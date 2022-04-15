@@ -126,15 +126,25 @@ section {
             padding: 0.5rem 1rem;
             border-radius: 5px;
             display: flex;
-            align-items: center;
-            width: 12rem;
             margin: 1rem;
+
+            @include m.tablet {
+                width: 12rem;
+            }
+
+            @include m.desktop {
+                width: 12rem;
+            }
 
             &__icon {
                 @include section-display-icon;
             }
 
             &__name {
+                @include m.phone {
+                    display: none;
+                }
+
                 margin-left: 1rem;
             }
 
