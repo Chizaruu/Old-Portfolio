@@ -756,8 +756,6 @@ button {
 }
 .landing__text__image-container__link__icon {
   padding: 0 1vw 0 0;
-  width: 48px;
-  height: 48px;
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .landing__text__image-container__link__icon--invert {
@@ -812,13 +810,17 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   display: flex;
-  align-items: center;
-  width: 12rem;
   margin: 1rem;
 }
-.skills__container__item__icon {
-  width: 48px;
-  height: 48px;
+@media only screen and (min-width: 451px) and (max-width: 880px) {
+  .skills__container__item {
+    width: 12rem;
+  }
+}
+@media only screen and (min-width: 881px) {
+  .skills__container__item {
+    width: 12rem;
+  }
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .skills__container__item__icon--invert {
@@ -827,6 +829,21 @@ button {
 }
 .skills__container__item__name {
   margin-left: 1rem;
+}
+@media only screen and (max-width: 450px) {
+  .skills__container__item__name {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .skills__container__item:hover {
+    box-shadow: 0px 0px 8px 0px #222222;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) .skills__container__item:hover {
+    box-shadow: 0px 0px 8px 0px #f3f4f6;
+  }
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .skills__container__item {
@@ -937,10 +954,6 @@ button {
   flex-direction: column;
   align-items: center;
 }
-.projects__container__item__link-divider__link__icon {
-  width: 48px;
-  height: 48px;
-}
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .projects__container__item__link-divider__link__icon--invert {
     filter: invert(1);
@@ -976,10 +989,6 @@ button {
 }
 .contact__container__item {
   padding: 0 1rem;
-}
-.contact__container__item__icon {
-  width: 48px;
-  height: 48px;
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .contact__container__item__icon--invert {
