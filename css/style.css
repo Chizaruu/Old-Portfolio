@@ -282,6 +282,13 @@ button {
     display: flex;
     align-items: center;
   }
+  .navbar__list__item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
 }
 @media only screen and (max-width: 450px) and (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list__item:hover {
@@ -439,6 +446,13 @@ button {
     display: flex;
     align-items: center;
   }
+  .navbar__list__item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
 }
 @media only screen and (min-width: 451px) and (max-width: 880px) and (prefers-color-scheme: light) {
   :root:not([data-theme=light]):not([data-theme=dark]) .navbar__list__item:hover {
@@ -595,6 +609,13 @@ button {
     height: 100%;
     display: flex;
     align-items: center;
+  }
+  .navbar__list__item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 881px) and (prefers-color-scheme: light) {
