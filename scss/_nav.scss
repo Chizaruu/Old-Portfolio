@@ -61,10 +61,13 @@
         }
 
         &__item {
-            border-radius: 5px;
             height: 100%;
             display: flex;
             align-items: center;
+
+            @include m.desktop {
+                border-radius: 5px;
+            }
 
             a {
                 display: flex;
