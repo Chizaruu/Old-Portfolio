@@ -1,61 +1,65 @@
-@use "palette"as p;
-@use "mixins"as m;
-
+@use "./palette.module" as p;
+@use "./mixins.module" as m;
 
 // Base font
-$font-family-styles: (heading: ('Roboto Slab',
-        'Helvetica Neue',
+$font-family-styles: (
+    heading: (
+        "Roboto Slab",
+        "Helvetica Neue",
         Arial,
-        sans-serif),
-    base: ('Roboto',
-        'Helvetica Neue',
+        sans-serif,
+    ),
+    base: (
+        "Roboto",
+        "Helvetica Neue",
         Arial,
-        sans-serif),
+        sans-serif,
+    ),
 );
 
-
 // Font weights
-$font-weights: (bolder: 900,
+$font-weights: (
+    bolder: 900,
     bold: 700,
     normal: 500,
     light: 300,
 );
 
-
 // Font size
-$font-sizes-headings: (h1:3rem,
-    h2:2.5rem,
-    h3:2rem,
-    h4:1.75rem,
-    h5:1.5rem,
-    h6:1.25rem,
+$font-sizes-headings: (
+    h1: 3rem,
+    h2: 2.5rem,
+    h3: 2rem,
+    h4: 1.75rem,
+    h5: 1.5rem,
+    h6: 1.25rem,
 );
 
-$font-sizes-text: (base:0.75rem,
-    small:0.625rem,
-    medium:0.875rem,
-    large:1rem,
-    xlarge:1.25rem,
-    xxlarge:1.5rem,
+$font-sizes-text: (
+    base: 0.75rem,
+    small: 0.625rem,
+    medium: 0.875rem,
+    large: 1rem,
+    xlarge: 1.25rem,
+    xxlarge: 1.5rem,
 );
-
 
 // Line-height
-$line-heights: (loose: 1.75,
+$line-heights: (
+    loose: 1.75,
     normal: 1.5,
     tight: 1.25,
 );
 
-
 // Letter-spacing
-$letter-spacings: (extra-wide: 0.1rem,
+$letter-spacings: (
+    extra-wide: 0.1rem,
     wide: 0.05rem,
     normal: 0,
     tight: -0.05rem,
 );
 
-
-//Data-Theme 
+//Data-Theme
 %data-theme {
     @include m.light {
         color: map-get(p.$light-theme-font-colors, primary);
@@ -73,7 +77,6 @@ $letter-spacings: (extra-wide: 0.1rem,
     font-weight: map-get($font-weights, bold);
     white-space: nowrap;
 }
-
 
 //headings
 h1,
@@ -106,6 +109,8 @@ h2 {
 p,
 a,
 li,
+span,
+label,
 footer {
     font-family: map-get($font-family-styles, base);
     line-height: map-get($line-heights, normal);
@@ -128,6 +133,15 @@ footer {
 a,
 footer,
 button {
+    font-weight: map-get($font-weights, bold);
+}
+
+label {
+    font-size: map-get($font-sizes-text, large);
+    font-weight: map-get($font-weights, bold);
+}
+
+input {
     font-weight: map-get($font-weights, bold);
 }
 
