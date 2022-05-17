@@ -3,6 +3,7 @@ import styles from "./App.module.scss";
 import { Footer } from "./containers/Footer/Footer";
 import { Main } from "./containers/Main/Main";
 import { Nav } from "./containers/Nav/Nav";
+import * as Scroll from "react-scroll";
 
 export default function App() {
     return (

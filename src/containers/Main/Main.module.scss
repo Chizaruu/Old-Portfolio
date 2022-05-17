@@ -4,6 +4,15 @@
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    min-height: calc(100% + constant(safe-area-inset-top));
+    min-height: calc(100% + env(safe-area-inset-top));
+
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
 }
