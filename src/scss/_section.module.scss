@@ -1,0 +1,302 @@
+@use "./palette.module" as p;
+@use "./mixins.module" as m;
+
+@mixin section-background-primary {
+    @include m.light {
+        background-color: map-get(p.$light-theme-colors, primary);
+    }
+
+    @include m.dark {
+        background-color: map-get(p.$dark-theme-colors, primary);
+    }
+}
+
+@mixin section-background-secondary {
+    @include m.light {
+        background-color: map-get(p.$light-theme-colors, secondary);
+    }
+
+    @include m.dark {
+        background-color: map-get(p.$dark-theme-colors, secondary);
+    }
+}
+
+@mixin section-display(
+    $display,
+    $flex-direction,
+    $align-items,
+    $justify-content,
+    $text-align
+) {
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    text-align: $text-align;
+}
+
+@mixin section-display-icon {
+    @include m.light {
+        &--invert {
+            filter: invert(1);
+        }
+    }
+}
+
+section {
+    $section-padding-default: (
+        phone: (
+            15vh 7vw,
+        ),
+        tablet: (
+            30vh 10vw 40vh,
+        ),
+        desktop: (
+            35vh 10vw 40vh,
+        ),
+    );
+
+    @include m.phone {
+        padding: map-get($section-padding-default, phone);
+    }
+
+    @include m.tablet {
+        padding: map-get($section-padding-default, tablet);
+    }
+
+    @include m.desktop {
+        padding: map-get($section-padding-default, desktop);
+    }
+}
+
+.landing {
+    @include m.phone {
+        padding-top: 25vh;
+        @include section-display(flex, column, center, center, center);
+
+        &__image {
+            @include m.display-image(map-get(m.$device-sizes, phone));
+        }
+    }
+
+    @include m.tablet {
+        @include section-display(flex, column, center, center, center);
+
+        &__image {
+            @include m.display-image(map-get(m.$device-sizes, tablet));
+        }
+    }
+
+    @include m.desktop {
+        @include section-display(flex, row, center, space-between, left);
+
+        &__image {
+            @include m.display-image(map-get(m.$device-sizes, desktop));
+        }
+    }
+
+    &__text {
+        padding-right: 3vw;
+
+        &__image-container {
+            &__link {
+                &__icon {
+                    padding: 0 1vw 0 0;
+                    @include section-display-icon;
+
+                    &:hover {
+                        @include m.light {
+                            filter: brightness(0.8);
+                            filter: drop-shadow(
+                                0 0 1px map-get(p.$dark-theme-colors, primary)
+                            );
+                        }
+
+                        @include m.dark {
+                            filter: brightness(1.2);
+                            filter: drop-shadow(
+                                0 0 1px map-get(p.$light-theme-colors, primary)
+                            );
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about {
+    @include section-display(flex, column, center, center, center);
+    @include section-background-secondary;
+}
+
+.skills {
+    @include section-display(flex, column, center, center, center);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+
+        &__item {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: flex;
+            margin: 1rem;
+
+            @include m.tablet {
+                width: 12rem;
+            }
+
+            @include m.desktop {
+                width: 12rem;
+            }
+
+            &__icon {
+                @include section-display-icon;
+            }
+
+            &__name {
+                @include m.phone {
+                    display: none;
+                }
+
+                margin-left: 1rem;
+            }
+
+            &:hover {
+                @include m.light {
+                    box-shadow: 0px 0px 8px 0px
+                        map-get(p.$dark-theme-colors, secondary);
+                }
+
+                @include m.dark {
+                    box-shadow: 0px 0px 8px 0px
+                        map-get(p.$light-theme-colors, secondary);
+                }
+            }
+
+            @include section-background-secondary;
+        }
+    }
+}
+
+.projects {
+    @include section-display(flex, column, center, center, center);
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+
+        @include m.phone {
+            justify-content: center;
+        }
+
+        @include m.tablet {
+            justify-content: center;
+        }
+
+        @include m.desktop {
+            justify-content: space-between;
+        }
+
+        &__item {
+            padding: 5rem 1.3rem 1rem 1.3rem;
+            border-radius: 0.5rem;
+            margin: 1vh 1vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include m.phone {
+                width: 100%;
+            }
+
+            @include m.tablet {
+                width: 100%;
+            }
+
+            @include m.desktop {
+                width: 20vw;
+            }
+
+            @include m.light {
+                box-shadow: 0 0.25rem 0.5rem 0
+                    map-get(p.$dark-theme-colors, primary);
+            }
+
+            @include m.dark {
+                box-shadow: 0 0.25rem 0.5rem 0
+                    map-get(p.$light-theme-colors, primary);
+            }
+
+            @include section-background-primary;
+
+            &__info-divider {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 0 0.5rem;
+
+                &__image {
+                    width: 55%;
+                    height: 55%;
+                    align-self: center;
+                }
+
+                &__name {
+                    margin-top: 0.5rem;
+                    text-align: center;
+                }
+
+                &__description {
+                    margin-top: 1rem 0;
+                    text-align: center;
+                }
+            }
+
+            &__link-divider {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+
+                &__link {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &__icon {
+                        @include section-display-icon;
+                    }
+                }
+            }
+        }
+    }
+
+    @include section-background-secondary;
+}
+
+.contact {
+    @include section-display(flex, column, center, center, center);
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        margin-top: 1rem;
+
+        &__text {
+            margin: 0;
+            padding: 0;
+        }
+
+        &__item {
+            padding: 0 1rem;
+
+            &__icon {
+                @include section-display-icon;
+            }
+        }
+    }
+}

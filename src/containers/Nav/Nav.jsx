@@ -4,7 +4,7 @@ export function Nav() {
     return (
         <nav className={styles.navbar}>
             <a className={styles.navbar__link} href="/" title="Hello World!">
-                &lt;Abdul Kadir Coskun /&gt; - My Utilities
+                &lt;Abdul Kadir Coskun /&gt;
             </a>
             <input id={styles.hamburger_toggle} type="checkbox" />
             <label
@@ -19,19 +19,46 @@ export function Nav() {
                 <li className={styles.navbar__list__item}>
                     <a
                         className={styles.navbar__list__item__link}
-                        href="/git-converter"
-                        title="Psst, You want some conversion?"
+                        href="#landing"
+                        title="Let's take it from the top."
                     >
-                        Gif Converter
+                        Home
                     </a>
                 </li>
                 <li className={styles.navbar__list__item}>
                     <a
                         className={styles.navbar__list__item__link}
-                        href="/morse-code-translator"
-                        title="- .. -- . / - --- / - .-. .- -. ... .-.. .- - . -.-.--"
+                        href="#about"
+                        title="Could be private! D:"
                     >
-                        Morse Code Translator
+                        About
+                    </a>
+                </li>
+                <li className={styles.navbar__list__item}>
+                    <a
+                        className={styles.navbar__list__item__link}
+                        href="#skills"
+                        title="I'm a developer!"
+                    >
+                        Skills
+                    </a>
+                </li>
+                <li className={styles.navbar__list__item}>
+                    <a
+                        className={styles.navbar__list__item__link}
+                        href="#projects"
+                        title="~Stuff I had fun making~"
+                    >
+                        Projects
+                    </a>
+                </li>
+                <li className={styles.navbar__list__item}>
+                    <a
+                        className={styles.navbar__list__item__link}
+                        href="#contact"
+                        title="We meeting next week?"
+                    >
+                        Contact
                     </a>
                 </li>
             </ul>
