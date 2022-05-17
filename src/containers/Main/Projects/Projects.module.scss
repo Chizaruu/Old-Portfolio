@@ -1,0 +1,98 @@
+@use "./../../../scss/palette.module" as p;
+@use "./../../../scss/mixins.module" as m;
+@use "./../mainMixins.module" as mainMixins;
+
+.projects {
+    @include mainMixins.section-display(flex, column, center, center, center);
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+
+        @include m.phone {
+            justify-content: center;
+        }
+
+        @include m.tablet {
+            justify-content: center;
+        }
+
+        @include m.desktop {
+            justify-content: space-between;
+        }
+
+        &__item {
+            padding: 5rem 1.3rem 1rem 1.3rem;
+            border-radius: 0.5rem;
+            margin: 1vh 1vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include m.phone {
+                width: 100%;
+            }
+
+            @include m.tablet {
+                width: 100%;
+            }
+
+            @include m.desktop {
+                width: 20vw;
+            }
+
+            @include m.light {
+                box-shadow: 0 0.25rem 0.5rem 0
+                    map-get(p.$dark-theme-colors, primary);
+            }
+
+            @include m.dark {
+                box-shadow: 0 0.25rem 0.5rem 0
+                    map-get(p.$light-theme-colors, primary);
+            }
+
+            @include mainMixins.section-background-primary;
+
+            &__info_divider {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 0 0.5rem;
+
+                &__image {
+                    width: 55%;
+                    height: 55%;
+                    align-self: center;
+                }
+
+                &__name {
+                    margin-top: 0.5rem;
+                    text-align: center;
+                }
+
+                &__description {
+                    margin-top: 1rem 0;
+                    text-align: center;
+                }
+            }
+
+            &__link_divider {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+
+                &__link {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &__icon {
+                        @include mainMixins.section-display-icon;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mainMixins.section-background-secondary;
+}

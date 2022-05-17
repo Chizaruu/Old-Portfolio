@@ -1,0 +1,77 @@
+@use "./../../../scss/palette.module" as p;
+@use "./../../../scss/mixins.module" as m;
+@use "./../mainMixins.module" as mainMixins;
+
+.landing {
+    @include m.phone {
+        padding-top: 25vh;
+        @include mainMixins.section-display(
+            flex,
+            column,
+            center,
+            center,
+            center
+        );
+
+        &__image {
+            @include m.display-image(map-get(m.$device-sizes, phone));
+        }
+    }
+
+    @include m.tablet {
+        @include mainMixins.section-display(
+            flex,
+            column,
+            center,
+            center,
+            center
+        );
+
+        &__image {
+            @include m.display-image(map-get(m.$device-sizes, tablet));
+        }
+    }
+
+    @include m.desktop {
+        @include mainMixins.section-display(
+            flex,
+            row,
+            center,
+            space-between,
+            left
+        );
+
+        &__image {
+            @include m.display-image(map-get(m.$device-sizes, desktop));
+        }
+    }
+
+    &__text {
+        padding-right: 3vw;
+
+        &__image-container {
+            &__link {
+                &__icon {
+                    padding: 0 1vw 0 0;
+                    @include mainMixins.section-display-icon;
+
+                    &:hover {
+                        @include m.light {
+                            filter: brightness(0.8);
+                            filter: drop-shadow(
+                                0 0 1px map-get(p.$dark-theme-colors, primary)
+                            );
+                        }
+
+                        @include m.dark {
+                            filter: brightness(1.2);
+                            filter: drop-shadow(
+                                0 0 1px map-get(p.$light-theme-colors, primary)
+                            );
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,13 +6,37 @@ main {
     flex-direction: column;
     align-items: center;
     height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
 
     min-height: calc(100% + constant(safe-area-inset-top));
     min-height: calc(100% + env(safe-area-inset-top));
 
     overflow: -moz-scrollbars-vertical;
     overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+section {
+    $section-padding-default: (
+        phone: (
+            15vh 7vw,
+        ),
+        tablet: (
+            30vh 10vw 40vh,
+        ),
+        desktop: (
+            35vh 10vw 40vh,
+        ),
+    );
+
+    @include m.phone {
+        padding: map-get($section-padding-default, phone);
+    }
+
+    @include m.tablet {
+        padding: map-get($section-padding-default, tablet);
+    }
+
+    @include m.desktop {
+        padding: map-get($section-padding-default, desktop);
+    }
 }

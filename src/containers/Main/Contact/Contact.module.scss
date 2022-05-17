@@ -1,0 +1,25 @@
+@use "./../mainMixins.module" as mainMixins;
+
+.contact {
+    @include mainMixins.section-display(flex, column, center, center, center);
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        margin-top: 1rem;
+
+        &__text {
+            margin: 0;
+            padding: 0;
+        }
+
+        &__item {
+            padding: 0 1rem;
+
+            &__icon {
+                @include mainMixins.section-display-icon;
+            }
+        }
+    }
+}
