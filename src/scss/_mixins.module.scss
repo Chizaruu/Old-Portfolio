@@ -23,6 +23,58 @@ $device-sizes: (
     }
 }
 
+$resolution-sizes: (
+    small: 48em /* 768px */,
+    medium: 64em /* 1024px */,
+    large: 85.375em /* 1366px */,
+    xlarge: 120em /* 1920px */,
+    xxlarge: 160em /* 2560px */,
+    xxxlarge: 192em /* 3200px */,
+    xxxxlarge: 240em /* 3840px */,
+);
+
+@mixin small-screen {
+    @media only screen and (max-width: map-get($resolution-sizes, small)) {
+        @content;
+    }
+}
+
+@mixin medium-screen {
+    @media only screen and (min-width: (map-get($resolution-sizes, small) + 1)) and (max-width: map-get($resolution-sizes, medium)) {
+        @content;
+    }
+}
+
+@mixin large-screen {
+    @media only screen and (min-width: (map-get($resolution-sizes, medium) + 1)) and (max-width: map-get($resolution-sizes, large)) {
+        @content;
+    }
+}
+
+@mixin xlarge-screen {
+    @media only screen and (min-width: (map-get($resolution-sizes, large) + 1)) and (max-width: map-get($resolution-sizes, xlarge)) {
+        @content;
+    }
+}
+
+@mixin xxlarge-screen {
+    @media only screen and (min-width: (map-get($resolution-sizes, xlarge) + 1)) and (max-width: map-get($resolution-sizes, xxlarge)) {
+        @content;
+    }
+}
+
+@mixin xxxlarge-screen {
+    @media only screen and (min-width: (map-get($resolution-sizes, xxlarge) + 1)) and (max-width: map-get($resolution-sizes, xxxlarge)) {
+        @content;
+    }
+}
+
+@mixin xxxxlarge-screen {
+    @media only screen and (min-width: (map-get($resolution-sizes, xxxlarge) + 1)) {
+        @content;
+    }
+}
+
 //Themes
 @mixin light {
     @media (prefers-color-scheme: light) {

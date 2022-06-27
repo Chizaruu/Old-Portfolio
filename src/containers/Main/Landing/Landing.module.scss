@@ -3,7 +3,13 @@
 @use "./../mainMixins.module" as mainMixins;
 
 .landing {
-    @include m.phone {
+    @include mainMixins.section-display(flex, row, center, space-between, left);
+
+    &__image {
+        @include m.display-image(map-get(m.$device-sizes, desktop));
+    }
+
+    @include m.small-screen {
         padding-top: 25vh;
         @include mainMixins.section-display(
             flex,
@@ -18,7 +24,7 @@
         }
     }
 
-    @include m.tablet {
+    @include m.medium-screen {
         @include mainMixins.section-display(
             flex,
             column,
@@ -29,20 +35,6 @@
 
         &__image {
             @include m.display-image(map-get(m.$device-sizes, tablet));
-        }
-    }
-
-    @include m.desktop {
-        @include mainMixins.section-display(
-            flex,
-            row,
-            center,
-            space-between,
-            left
-        );
-
-        &__image {
-            @include m.display-image(map-get(m.$device-sizes, desktop));
         }
     }
 

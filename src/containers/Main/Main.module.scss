@@ -17,26 +17,24 @@ main {
 
 section {
     $section-padding-default: (
-        phone: (
+        small: (
             15vh 7vw,
         ),
-        tablet: (
+        medium: (
             30vh 10vw 40vh,
         ),
-        desktop: (
+        _: (
             35vh 10vw 40vh,
         ),
     );
 
-    @include m.phone {
-        padding: map-get($section-padding-default, phone);
+    padding: map-get($section-padding-default, _);
+
+    @include m.small-screen {
+        padding: map-get($section-padding-default, small);
     }
 
-    @include m.tablet {
-        padding: map-get($section-padding-default, tablet);
-    }
-
-    @include m.desktop {
-        padding: map-get($section-padding-default, desktop);
+    @include m.medium-screen {
+        padding: map-get($section-padding-default, medium);
     }
 }

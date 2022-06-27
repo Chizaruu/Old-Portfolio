@@ -8,17 +8,13 @@
     &__container {
         display: flex;
         flex-flow: row wrap;
-
-        @include m.phone {
+        justify-content: space-between;
+        @include m.small-screen {
             justify-content: center;
         }
 
-        @include m.tablet {
+        @include m.medium-screen {
             justify-content: center;
-        }
-
-        @include m.desktop {
-            justify-content: space-between;
         }
 
         &__item {
@@ -28,17 +24,14 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            width: 20vw;
 
-            @include m.phone {
+            @include m.small-screen {
                 width: 100%;
             }
 
-            @include m.tablet {
+            @include m.medium-screen {
                 width: 100%;
-            }
-
-            @include m.desktop {
-                width: 20vw;
             }
 
             @include m.light {

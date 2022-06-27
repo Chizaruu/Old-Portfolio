@@ -1,6 +1,6 @@
 import styles from "./Skills.module.scss";
 
-export function Skills() {
+export default function Skills() {
     return (
         <section className={styles.skills} id="skills">
             <h2>Skills</h2>

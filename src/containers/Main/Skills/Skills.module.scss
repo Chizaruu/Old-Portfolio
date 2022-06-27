@@ -11,17 +11,38 @@
         flex-wrap: wrap;
         margin-top: 2rem;
 
+        @include m.small-screen {
+            justify-content: center;
+        }
+
         &__item {
             padding: 0.5rem 1rem;
             border-radius: 5px;
             display: flex;
             margin: 1rem;
+            width: 12rem;
 
-            @include m.tablet {
+            @include m.small-screen {
                 width: 12rem;
             }
 
-            @include m.desktop {
+            @include m.medium-screen {
+                width: 12rem;
+            }
+
+            @include m.large-screen {
+                width: 12rem;
+            }
+
+            @include m.xlarge-screen {
+                width: 12rem;
+            }
+
+            @include m.xxlarge-screen {
+                width: 12rem;
+            }
+
+            @include m.xxxlarge-screen {
                 width: 12rem;
             }
 
@@ -30,10 +51,6 @@
             }
 
             &__name {
-                @include m.phone {
-                    display: none;
-                }
-
                 margin-left: 1rem;
             }
 
