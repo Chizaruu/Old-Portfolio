@@ -10,7 +10,6 @@
     }
 
     @include m.small-screen {
-        padding-top: 25vh;
         @include mainMixins.section-display(
             flex,
             column,
@@ -41,7 +40,7 @@
     &__text {
         padding-right: 3vw;
 
-        &__image-container {
+        &__image_container {
             &__link {
                 &__icon {
                     padding: 0 1vw 0 0;
@@ -66,4 +65,12 @@
             }
         }
     }
+}
+
+#asterisk {
+    color: map-get(p.$special-colors, asterisk);
+}
+
+#youtube {
+    color: map-get(p.$special-colors, youtube);
 }

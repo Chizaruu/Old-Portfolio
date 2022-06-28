@@ -1,3 +1,5 @@
+@use "./palette.module" as p;
+
 // Devices
 $device-sizes: (
     phone: 450px,

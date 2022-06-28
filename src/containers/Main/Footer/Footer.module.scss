@@ -1,14 +1,11 @@
-@use "./../../scss/palette.module" as p;
-@use "./../../scss/mixins.module" as m;
+@use "./../../../scss/palette.module" as p;
+@use "./../mainMixins.module" as mainMixins;
 
-footer {
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     height: 5vh;
 
     span {
@@ -28,11 +25,5 @@ footer {
         }
     }
 
-    @include m.light {
-        background-color: map-get(p.$light-theme-colors, secondary);
-    }
-
-    @include m.dark {
-        background-color: map-get(p.$dark-theme-colors, secondary);
-    }
+    @include mainMixins.section-background-secondary;
 }

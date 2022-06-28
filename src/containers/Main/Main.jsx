@@ -4,15 +4,19 @@ import About from "./About/About";
 import Skills from "./Skills/Skills";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact/Contact";
+import Footer from "./Footer/Footer";
 
-export function Main() {
+export default function Main() {
     return (
         <main className={styles.main}>
-            <Landing />
-            <About />
-            <Skills />
-            <Projects />
-            <Contact />
+            <div>
+                <Landing />
+                <About />
+                <Skills />
+                <Projects />
+                <Contact />
+                <Footer />
+            </div>
         </main>
     );
 }

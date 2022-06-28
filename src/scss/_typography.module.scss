@@ -190,11 +190,3 @@ button,
 input {
     font-weight: map-get($font-weights, bold);
 }
-
-#youtube {
-    color: map-get(p.$special-colors, youtube);
-}
-
-#asterisk {
-    color: map-get(p.$special-colors, asterisk);
-}

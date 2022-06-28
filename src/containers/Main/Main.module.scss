@@ -1,18 +1,13 @@
 @use "./../../scss/palette.module" as p;
 @use "./../../scss/mixins.module" as m;
 
-main {
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-
-    min-height: calc(100% + constant(safe-area-inset-top));
-    min-height: calc(100% + env(safe-area-inset-top));
-
-    overflow: -moz-scrollbars-vertical;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    height: 95vh;
 }
 
 section {
@@ -24,7 +19,7 @@ section {
             30vh 10vw 40vh,
         ),
         _: (
-            35vh 10vw 40vh,
+            25vh 0 50vh,
         ),
     );
 

@@ -12,7 +12,7 @@
 }
 
 @mixin section-background-secondary {
-    width: 100vw;
+    width: 100%;
     @include m.light {
         background-color: map-get(p.$light-theme-colors, secondary);
     }

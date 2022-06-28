@@ -1,6 +1,6 @@
 import styles from "./Nav.module.scss";
 
-export function Nav() {
+export default function Nav() {
     return (
         <nav className={styles.navbar}>
             <a className={styles.navbar__link} href="/" title="Hello World!">

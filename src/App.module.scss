@@ -1,11 +1,10 @@
 @use "./scss/typography.module";
-@use "./scss/background.module";
-@use "./scss/mixins.module";
+@use "./scss/mixins.module" as m;
 @use "./scss/button.module";
+@use "./scss/background.module";
 
 .App {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    @include m.section-background-secondary;
 }

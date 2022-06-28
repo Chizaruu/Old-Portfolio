@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./App.module.scss";
-import { Footer } from "./containers/Footer/Footer";
-import { Main } from "./containers/Main/Main";
-import { Nav } from "./containers/Nav/Nav";
+import Main from "./containers/Main/Main";
+import Nav from "./containers/Nav/Nav";
 
 export default function App() {
     return (
@@ -12,7 +11,6 @@ export default function App() {
                     <div className={styles.clouds}>
                         <Nav />
                         <Main />
-                        <Footer />
                     </div>
                 </div>
             </div>
