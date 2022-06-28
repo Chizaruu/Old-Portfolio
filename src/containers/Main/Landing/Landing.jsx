@@ -11,7 +11,7 @@ export default function Landing() {
                         *
                     </span>
                     ) / Game developer. I'm currently working as a freelancer
-                    while creating content on
+                    while creating content on{" "}
                     <a
                         id={styles.youtube}
                         href="https://www.youtube.com/channel/UC8__XEn9chu9LYDxFC4WzIA"
@@ -20,7 +20,7 @@ export default function Landing() {
                         title="My channel! :)"
                     >
                         Youtube
-                    </a>
+                    </a>{" "}
                     for the Unity Engine.
                 </p>
                 <div className={styles.landing__text__image_container}>

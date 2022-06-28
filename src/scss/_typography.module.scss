@@ -112,6 +112,10 @@ h6 {
     @extend %data-theme;
 }
 
+h1 {
+    font-size: 3em;
+}
+
 //text
 p,
 a,
@@ -146,6 +150,11 @@ footer {
     }
 
     @extend %data-theme;
+}
+
+p > a,
+a > p {
+    font-size: inherit;
 }
 
 input,
