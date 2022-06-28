@@ -1,0 +1,201 @@
+@use "./palette.module" as p;
+@use "./mixins.module" as m;
+
+// Base font
+$font-family-styles: (
+    heading: (
+        "Roboto Slab",
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+    ),
+    base: (
+        "Roboto",
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+    ),
+);
+
+//base font sizes
+$font-sizes: (
+    heading: (
+        small: 1em,
+        medium: 1.2em,
+        large: 1.4em,
+        xlarge: 1.6em,
+        xxlarge: 1.8em,
+        xxxlarge: 2em,
+        xxxxlarge: 2.2em,
+    ),
+    base: (
+        small: 1em,
+        medium: 1.1em,
+        large: 1.3em,
+        xlarge: 1.5em,
+        xxlarge: 1.7em,
+        xxxlarge: 2.2em,
+        xxxxlarge: 2.8em,
+    ),
+);
+
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Font weights
+$font-weights: (
+    bolder: 900,
+    bold: 700,
+    normal: 500,
+    light: 300,
+);
+
+// Letter-spacing
+$letter-spacings: (
+    extra-wide: 0.1rem,
+    wide: 0.05rem,
+    normal: 0,
+    tight: -0.05rem,
+);
+
+//Data-Theme
+%data-theme {
+    @include m.light {
+        color: map-get(p.$light-theme-font-colors, primary);
+    }
+
+    @include m.dark {
+        color: map-get(p.$dark-theme-font-colors, primary);
+    }
+}
+
+%font-headings {
+    font-family: map-get($font-family-styles, heading);
+    letter-spacing: map-get($letter-spacings, normal);
+    font-weight: map-get($font-weights, bold);
+    white-space: nowrap;
+    font-size: map-get($font-sizes, heading, small);
+
+    @include m.medium-screen {
+        font-size: map-get($font-sizes, heading, medium);
+    }
+
+    @include m.large-screen {
+        font-size: map-get($font-sizes, heading, large);
+    }
+
+    @include m.xlarge-screen {
+        font-size: map-get($font-sizes, heading, xlarge);
+    }
+
+    @include m.xxlarge-screen {
+        font-size: map-get($font-sizes, heading, xxlarge);
+    }
+
+    @include m.xxxlarge-screen {
+        font-size: map-get($font-sizes, heading, xxxlarge);
+    }
+
+    @include m.xxxxlarge-screen {
+        font-size: map-get($font-sizes, heading, xxxxlarge);
+    }
+}
+
+//headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend %font-headings;
+    @extend %data-theme;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+//text
+p,
+a,
+footer {
+    font-family: map-get($font-family-styles, base);
+    font-size: map-get($font-sizes, base, small);
+    line-height: $base-line-height;
+
+    @include m.medium-screen {
+        font-size: map-get($font-sizes, base, medium);
+        line-height: $base-line-height * 1.2;
+    }
+
+    @include m.large-screen {
+        font-size: map-get($font-sizes, base, large);
+    }
+
+    @include m.xlarge-screen {
+        font-size: map-get($font-sizes, base, xlarge);
+    }
+
+    @include m.xxlarge-screen {
+        font-size: map-get($font-sizes, base, xxlarge);
+    }
+
+    @include m.xxxlarge-screen {
+        font-size: map-get($font-sizes, base, xxxlarge);
+    }
+
+    @include m.xxxxlarge-screen {
+        font-size: map-get($font-sizes, base, xxxxlarge);
+    }
+
+    @extend %data-theme;
+}
+
+p > a,
+a > p {
+    font-size: inherit;
+}
+
+input,
+select,
+option,
+button {
+    font-family: map-get($font-family-styles, base);
+    font-size: map-get($font-sizes, base, small);
+    line-height: $base-line-height;
+
+    @include m.medium-screen {
+        font-size: map-get($font-sizes, base, medium);
+        line-height: $base-line-height * 1.2;
+    }
+
+    @include m.large-screen {
+        font-size: map-get($font-sizes, base, large);
+    }
+
+    @include m.xlarge-screen {
+        font-size: map-get($font-sizes, base, xlarge);
+    }
+
+    @include m.xxlarge-screen {
+        font-size: map-get($font-sizes, base, xxlarge);
+    }
+
+    @include m.xxxlarge-screen {
+        font-size: map-get($font-sizes, base, xxxlarge);
+    }
+
+    @include m.xxxxlarge-screen {
+        font-size: map-get($font-sizes, base, xxxxlarge);
+    }
+
+    color: map-get(p.$light-theme-font-colors, primary);
+}
+
+a,
+footer,
+button,
+input {
+    font-weight: map-get($font-weights, bold);
+}

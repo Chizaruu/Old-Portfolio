@@ -1,7 +1,7 @@
-@use "palette"as p;
-@use "mixins"as m;
+@use "./../../scss/palette.module" as p;
+@use "./../../scss/mixins.module" as m;
 
-@mixin navbar-list-hamburger {
+@mixin navbar_list_hamburger {
     position: fixed;
     top: 0;
     margin: 4.5vh 0 0 0;
@@ -12,7 +12,7 @@
     align-items: center;
     display: none;
 
-    &>li {
+    & > li {
         display: flex;
         justify-content: center;
         margin: 0;
@@ -28,7 +28,7 @@
         }
     }
 
-    &>li:not(:last-child) {
+    & > li:not(:last-child) {
         @include m.light {
             border-bottom: 1px solid map-get(p.$light-theme-colors, secondary);
         }
@@ -39,34 +39,38 @@
     }
 }
 
-@mixin navbar-list {
+@mixin navbar_list {
     &__list {
         list-style: none;
 
-        @include m.phone {
-            @include navbar-list-hamburger;
+        @include m.small-screen {
+            @include navbar_list_hamburger;
         }
 
-        @include m.tablet {
-            @include navbar-list-hamburger;
+        @include m.medium-screen {
+            @include navbar_list_hamburger;
         }
 
-        @include m.desktop {
-            display: flex;
-            justify-content: space-evenly;
-            width: 35vw;
-            padding-right: 5vw;
-            align-items: center;
-            height: 100%;
-        }
+        display: flex;
+        justify-content: space-evenly;
+        width: 35vw;
+        padding-right: 5vw;
+        align-items: center;
+        height: 100%;
 
         &__item {
             height: 100%;
             display: flex;
             align-items: center;
 
-            @include m.desktop {
-                border-radius: 5px;
+            border-radius: 5px;
+
+            @include m.small-screen {
+                border-radius: 0;
+            }
+
+            @include m.medium-screen {
+                border-radius: 0;
             }
 
             a {
@@ -90,7 +94,7 @@
     }
 }
 
-@mixin navbar-hamburger {
+@mixin navbar_hamburger {
     &__hamburger-container {
         display: flex;
         height: 100%;
@@ -122,12 +126,12 @@
         }
 
         &__button::before {
-            content: '';
+            content: "";
             margin-top: -8px;
         }
 
         &__button::after {
-            content: '';
+            content: "";
             margin-top: 8px;
         }
     }
@@ -137,10 +141,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     width: 100%;
-    height: 5%;
-    z-index: 1;
+    height: 5vh;
 
     a {
         text-decoration: none;
@@ -148,18 +150,14 @@
         padding: 0 1vw;
     }
 
-    @include m.phone {
-        @include navbar-list;
+    @include navbar-list;
+
+    @include m.small-screen {
         @include navbar-hamburger;
     }
 
-    @include m.tablet {
-        @include navbar-list;
+    @include m.medium-screen {
         @include navbar-hamburger;
-    }
-
-    @include m.desktop {
-        @include navbar-list;
     }
 
     @include m.light {
@@ -173,30 +171,36 @@
     }
 }
 
-#hamburger-toggle {
+#hamburger_toggle {
     display: none;
 }
 
-#hamburger-toggle:checked+.navbar__hamburger-container .navbar__hamburger-container__button::before {
+#hamburger_toggle:checked
+    + .navbar__hamburger_container
+    .navbar__hamburger_container__button::before {
     margin-top: 0px;
     transform: rotate(405deg);
 }
 
-#hamburger-toggle:checked+.navbar__hamburger-container .navbar__hamburger-container__button {
+#hamburger_toggle:checked
+    + .navbar__hamburger_container
+    .navbar__hamburger_container__button {
     background: rgba(255, 255, 255, 0);
 }
 
-#hamburger-toggle:checked+.navbar__hamburger-container .navbar__hamburger-container__button::after {
+#hamburger_toggle:checked
+    + .navbar__hamburger_container
+    .navbar__hamburger_container__button::after {
     margin-top: 0px;
     transform: rotate(-405deg);
 }
 
-@mixin hamburger-small-display-toggle {
-    #hamburger-toggle:checked~.navbar__list {
+@mixin hamburger_small_display_toggle {
+    #hamburger_toggle:checked ~ .navbar__list {
         display: flex;
     }
 
-    #hamburger-toggle~.navbar__list li {
+    #hamburger_toggle ~ .navbar__list li {
         height: 0;
         margin: 0;
         padding: 0;
@@ -204,7 +208,7 @@
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
 
-    #hamburger-toggle:checked~.navbar__list li {
+    #hamburger_toggle:checked ~ .navbar__list li {
         @include m.light {
             border: 1px solid map-get(p.$light-theme-colors, quinary);
         }
@@ -218,10 +222,10 @@
     }
 }
 
-@include m.phone {
-    @include hamburger-small-display-toggle;
+@include m.small-screen {
+    @include hamburger_small_display_toggle;
 }
 
-@include m.tablet {
-    @include hamburger-small-display-toggle;
+@include m.medium-screen {
+    @include hamburger_small_display_toggle;
 }

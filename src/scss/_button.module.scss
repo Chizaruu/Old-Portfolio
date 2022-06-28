@@ -1,5 +1,5 @@
-@use "palette"as p;
-@use "mixins"as m;
+@use "./palette.module" as p;
+@use "./mixins.module" as m;
 
 button {
     text-align: center;

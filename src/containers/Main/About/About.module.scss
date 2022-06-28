@@ -1,0 +1,6 @@
+@use "./../mainMixins.module" as mainMixins;
+
+.about {
+    @include mainMixins.section-display(flex, column, center, center, center);
+    @include mainMixins.section-background-secondary;
+}

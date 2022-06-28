@@ -1,0 +1,76 @@
+@use "./../../../scss/palette.module" as p;
+@use "./../../../scss/mixins.module" as m;
+@use "./../mainMixins.module" as mainMixins;
+
+.landing {
+    @include mainMixins.section-display(flex, row, center, space-between, left);
+
+    &__image {
+        @include m.display-image(map-get(m.$device-sizes, desktop));
+    }
+
+    @include m.small-screen {
+        @include mainMixins.section-display(
+            flex,
+            column,
+            center,
+            center,
+            center
+        );
+
+        &__image {
+            @include m.display-image(map-get(m.$device-sizes, phone));
+        }
+    }
+
+    @include m.medium-screen {
+        @include mainMixins.section-display(
+            flex,
+            column,
+            center,
+            center,
+            center
+        );
+
+        &__image {
+            @include m.display-image(map-get(m.$device-sizes, tablet));
+        }
+    }
+
+    &__text {
+        padding-right: 3vw;
+
+        &__image_container {
+            &__link {
+                &__icon {
+                    padding: 0 1vw 0 0;
+                    @include mainMixins.section-display-icon;
+
+                    &:hover {
+                        @include m.light {
+                            filter: brightness(0.8);
+                            filter: drop-shadow(
+                                0 0 1px map-get(p.$dark-theme-colors, primary)
+                            );
+                        }
+
+                        @include m.dark {
+                            filter: brightness(1.2);
+                            filter: drop-shadow(
+                                0 0 1px map-get(p.$light-theme-colors, primary)
+                            );
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#asterisk {
+    color: map-get(p.$special-colors, asterisk);
+}
+
+#youtube {
+    color: map-get(p.$special-colors, youtube);
+}

@@ -1,0 +1,71 @@
+@use "./../mainMixins.module" as mainMixins;
+@use "./../../../scss/palette.module" as p;
+@use "./../../../scss/mixins.module" as m;
+
+.skills {
+    @include mainMixins.section-display(flex, column, center, center, center);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+
+        @include m.small-screen {
+            justify-content: center;
+        }
+
+        &__item {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: flex;
+            margin: 1rem;
+
+            @include m.small-screen {
+                width: 12rem;
+            }
+
+            @include m.medium-screen {
+                width: 12rem;
+            }
+
+            @include m.large-screen {
+                width: 12rem;
+            }
+
+            @include m.xlarge-screen {
+                width: 12rem;
+            }
+
+            @include m.xxlarge-screen {
+                width: 12rem;
+            }
+
+            @include m.xxxlarge-screen {
+                width: 12rem;
+            }
+
+            &__icon {
+                @include mainMixins.section-display-icon;
+            }
+
+            &__name {
+                margin-left: 1rem;
+            }
+
+            &:hover {
+                @include m.light {
+                    box-shadow: 0px 0px 8px 0px
+                        map-get(p.$dark-theme-colors, secondary);
+                }
+
+                @include m.dark {
+                    box-shadow: 0px 0px 8px 0px
+                        map-get(p.$light-theme-colors, secondary);
+                }
+            }
+
+            @include mainMixins.section-background-secondary;
+        }
+    }
+}
